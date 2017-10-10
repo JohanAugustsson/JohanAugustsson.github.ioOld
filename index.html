@@ -3,39 +3,148 @@
   <head>
     <meta charset="utf-8">
     <title>Johan Augustsson</title>
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style media="screen">
-      .Main{display: block;position: relative; width: 100%; height: 150em; background-color: #27252F;}
-      .MainContent{width: 100%; display: inline;position: relative;}
-      .MainBackground{display: inline; position: relative; left: 5em; top: 5em;}
-      .Secound{display: block;position: relative; width: 100%; height: 50em;  background-color: #84cd1c;}
-      .Third{display: block;position: relative; width: 100%; height: 50em;  background-color: #24222D;}
-      li{color: rgb(202, 208, 33);font-size: 3em; font-family: 'Permanent Marker'; list-style-type: none;}
-      a{color: rgb(202,208,33);}
+      *{margin: 0 0; padding: 0 0;font-family: fantasy; font-weight: lighter;}
+
+
+
+      .MainPicture{
+        z-index: 40;
+        position: relative;
+        display: block;
+        height:100vh;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: black;
+        background-image: url("https://firebasestorage.googleapis.com/v0/b/hemsida-1.appspot.com/o/me4.jpeg?alt=media&token=cd755430-67cd-4646-aab9-cdaf9123ab87");}
+
+
+      .Content{
+        background-color: #09294f;
+        height:100vh;
+        width: 100%;
+        display: block;
+
+
+
+      }
+      .ContentLeft{
+        box-sizing: border-box;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        width: 300px;
+        height: 50px;
+        left: 100px;
+        top:  500px;
+        background-color: #D16E0D;
+        z-index: 60;
+        color:  #D16E0D;
+      }
+      .ContentMid{
+        box-sizing: border-box;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        width: 300px;
+        height: 50px;
+        left: 500px;
+        top:  500px;
+        background-color: #0FD49F;
+        z-index: 60;
+        color: #0FD49F;
+      }
+      .ContentRight{
+        box-sizing: border-box;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        width: 300px;
+        height: 50px;
+        left: 1000px;
+        top:  500px;
+        background-color: #C9D40F;
+        z-index: 60;
+        color: #C9D40F;
+
+      }
+      .Skill{
+        box-sizing: border-box;
+        text-align: center;
+        display: block;
+        position: relative;
+        width: 300px;
+        height: 50px;
+        left: 100px;
+        top:  200px;
+        background-color: #F7F7F7;
+        z-index: 70;
+        color: #F7F7F7;
+
+      }
+      li,a{display: inline;color: #DB1447;margin-right: 10px;font-size: 1.5em;}
 
     </style>
   </head>
   <body>
-    <div class="Main">
-      <div class="MainContent">
-        <div class="MainBackground">
-            <img width="80%"src="https://firebasestorage.googleapis.com/v0/b/hemsida-1.appspot.com/o/laguppst%C3%A4llnig.jpeg?alt=media&token=79569650-9eed-4e04-b957-a9fa4f5b88a1" alt="Laguppställning">
-        </div>
-        <ol style="position: fixed; right: 20px ;top: 10em;">
-          <li><a href="exercises.html" target="_blank">Practice Court!</a></li>
-          
-        </ol>
 
 
+      <div class="MainPicture">
       </div>
 
 
-    </div>
-    <div class="Secound">
 
-    </div>
-    <div class="Third">
+      <div class="Content">
 
-    </div>
+        <div class="Skill">
+          <div style="position: relative; top: -30px;">
+              <h3>Skills</h3>
+          </div>
+            <p style="position: absolute;width:600px;top: 70px;text-align: left;">Hope that the skill tree can grove a bit larger.. shouldent be that hard consider below</p>
+        </div>
+
+        <div class="ContentLeft">
+
+          <div style="position: relative; top: -30px;">
+            <h3>Grafisk Design 0.1%</h3>
+
+          </div>
+          <p style="position: absolute;width:500px;top: 70px;text-align: left;">What´da fuck is design?</p>
+        </div>
+
+        <div class="ContentMid">
+          <div style="position: relative; top:  -30px;">
+            <h3>Javascript 0.2%</h3>
+          </div>
+            <p style="position: absolute;width:500px;top: 70px;text-align: left;">4 weeks of digging in javascript. wiieee!!!</p>
+        </div>
+
+        <div class="ContentRight">
+          <div style="position: relative; top: -30px;">
+            <h3>HTML och CSS 0.1%</h3>
+          </div>
+
+          <p style="position: absolute;width:500px;top: 70px;text-align: left;">New to html and css.</p>
+
+        </div>
+
+        <div class="Skill" style="top: 900px;">
+          <div style="position: relative; top: -30px;">
+            <h3>About</h3>
+          </div>
+          <p style="position: absolute;width:500px;top: 70px;text-align: left;">37 yeasr old living in Gothenburg in Eriksberg. Nothing more interest to say about this fellow</p>
+        </div>
+
+
+        <ol style="position: fixed; right: 20px ;bottom: 20px;">
+           <li><a href="exercises.html" target="_blank">Practice Court!</a></li>
+           <li><a href="https://www.linkedin.com/in/johan-augustsson-180b43138/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+       </ol>
+      </div>
+
+
+
   </body>
 </html>
