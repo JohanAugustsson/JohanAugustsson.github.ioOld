@@ -5,15 +5,15 @@
   <title>Quest 7-14</title>
 
   <style media="screen">
-  *{margin: 0; padding:0;box-sizing: border-box;}
+  *{margin: 0; padding:0;box-sizing: content-box;}
 
   .maincontent{
 
     position: relative;
     top: 25%;
     margin: auto;
-    height: 200px;
-    width: 200px;
+    height: 198px;
+    width: 198px;
     border: 1px blue solid;
 
   }
@@ -26,16 +26,19 @@
 
 
   td{
-    width: 25px;
-    height: 25px;
+    width: 24.75px;
+    height: 24.75px;
   }
 
-  .odd td:nth-child(even){
+
+  tr:nth-of-type(odd) > td:nth-of-type(odd){
     background-color: black;
   }
-  .even td:nth-child(odd){
+  
+  tr:nth-of-type(even) > td:nth-of-type(even){
     background-color: black;
   }
+  
   body{
     width:100%;
     height: 100vh;
@@ -50,7 +53,7 @@
 
 <div class="maincontent">
   <table>
-    <tr class="odd">
+    <tr>
        <td></td>
        <td></td>
        <td></td>
@@ -61,7 +64,7 @@
        <td></td>
     </tr>
 
-    <tr class="even">
+    <tr>
       <td></td>
       <td></td>
       <td></td>
@@ -71,7 +74,7 @@
       <td></td>
       <td></td>
     </tr>
-    <tr class="odd">
+    <tr>
       <td></td>
       <td></td>
       <td></td>
@@ -81,7 +84,7 @@
       <td></td>
       <td></td>
     </tr>
-    <tr class="even">
+    <tr>
       <td></td>
       <td></td>
       <td></td>
@@ -91,7 +94,7 @@
       <td></td>
       <td></td>
     </tr>
-    <tr class="odd">
+    <tr>
       <td></td>
       <td></td>
       <td></td>
@@ -101,7 +104,7 @@
       <td></td>
       <td></td>
     </tr>
-    <tr class="even">
+    <tr>
       <td></td>
       <td></td>
       <td></td>
@@ -111,7 +114,7 @@
       <td></td>
       <td></td>
     </tr>
-    <tr class="odd">
+    <tr>
       <td></td>
       <td></td>
       <td></td>
@@ -121,7 +124,7 @@
       <td></td>
       <td></td>
     </tr>
-    <tr class="even">
+    <tr>
       <td></td>
       <td></td>
       <td></td>
@@ -138,3 +141,4 @@
 </body>
 
 </html>
+
