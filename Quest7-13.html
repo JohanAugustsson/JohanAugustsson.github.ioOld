@@ -1,1 +1,104 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Quest 7-13</title>
+  <style media="screen">
+  *{
+    margin:0;
+    paddin:0;
+  }
+  ul{
+    list-style-type: none;
+    margin-left:5;
+    padding-left: 0;
+  }
+  li{
+    text-align: center;
+    padding: 10px;
+    margin:auto;
+    background-color: rgb(212, 212, 212);
+  }
+
+  .menu >li{
+    display: inline-block;
+
+  }
+  .menudropp{
+    display:none;
+    position:absolute;
+    margin left: -15;
+    padding: 10px 0px;
+  }
+  .menudropp > li{
+    text-align: left;
+    margin-left:-11px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border: 1px rgb(194, 194, 194) solid;
+  }
+  body> ul> li:hover{
+    background-color:rgb(109, 174, 235);
+    color: black;
+    outline: 2px rgb(130, 196, 221) solid;
+  }
+  .menu>li:hover .menudropp{
+    display:block;
+    border-top: none;
+
+
+  }
+  .menudropp>li:hover{
+    color:white;
+    background-color:rgb(109, 174, 235);
+    
+  }
+  .menu{
+    position: fixed;
+    background-color: #d7d7d7;
+    width: 500px;
+    height:40px;
+    left: 20px;
+    top: 10px;
+  }
+  </style>
+</head>
+<body>
+
+<ul class="menu">
+  <li>Arkiv
+    <ul class="menudropp">
+      <li>Ny fil</li>
+      <li>Spara</li>
+      <li>Inställningar</li>
+      <li>om</li>
+      <li>Avsluta</li>
+    </ul>
+  </li>
+  <li>Redigera
+    <ul class="menudropp">
+      <li>Ångra</li>
+      <li>Gör om</li>
+      <li>Klipp ut</li>
+      <li>Kopiera</li>
+      <li>Klistra in</li>
+    </ul>
+  </li>
+  <li>Visa
+    <ul class="menudropp">
+      <li>Sida vid sida</li>
+      <li>Överlappande</li>
+
+    </ul>
+  </li>
+  <li>infoga
+    <ul class="menudropp">
+      <li>dig själv</li>
+    </ul>
+  </li>
+</ul>
+
+</body>
+
+
+</html>
