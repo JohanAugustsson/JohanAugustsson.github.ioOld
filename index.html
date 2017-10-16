@@ -4,89 +4,9 @@
     <meta charset="utf-8">
     <title>Johan Augustsson</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style media="screen">
-      *{margin: 0 0; padding: 0 0;font-family: fantasy; font-weight: lighter;}
+    <link href="style.css" rel="stylesheet" type="text/css" />
 
 
-
-      .MainPicture{
-        z-index: 40;
-        position: relative;
-        display: block;
-        height:100vh;
-        width: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-color: black;
-        background-image: url("https://firebasestorage.googleapis.com/v0/b/hemsida-1.appspot.com/o/me4.jpeg?alt=media&token=cd755430-67cd-4646-aab9-cdaf9123ab87");}
-
-
-      .Content{
-        background-color: #09294f;
-        height:100vh;
-        width: 100%;
-        display: block;
-
-
-
-      }
-      .ContentLeft{
-        box-sizing: border-box;
-        text-align: center;
-        display: inline-block;
-        position: relative;
-        width: 300px;
-        height: 50px;
-        left: 100px;
-        top:  500px;
-        background-color: #D16E0D;
-        z-index: 60;
-        color:  #D16E0D;
-      }
-      .ContentMid{
-        box-sizing: border-box;
-        text-align: center;
-        display: inline-block;
-        position: relative;
-        width: 300px;
-        height: 50px;
-        left: 500px;
-        top:  500px;
-        background-color: #0FD49F;
-        z-index: 60;
-        color: #0FD49F;
-      }
-      .ContentRight{
-        box-sizing: border-box;
-        text-align: center;
-        display: inline-block;
-        position: relative;
-        width: 300px;
-        height: 50px;
-        left: 1000px;
-        top:  500px;
-        background-color: #C9D40F;
-        z-index: 60;
-        color: #C9D40F;
-
-      }
-      .Skill{
-        box-sizing: border-box;
-        text-align: center;
-        display: block;
-        position: relative;
-        width: 300px;
-        height: 50px;
-        left: 100px;
-        top:  200px;
-        background-color: #F7F7F7;
-        z-index: 70;
-        color: #F7F7F7;
-
-      }
-      li,a{display: inline;color: #DB1447;margin-right: 10px;font-size: 1.5em;}
-
-    </style>
   </head>
   <body>
 
@@ -96,54 +16,70 @@
 
 
 
-      <div class="Content">
+      <div id="Content">
 
-        <div class="Skill">
-          <div style="position: relative; top: -30px;">
-              <h3>Skills</h3>
-          </div>
-            <p style="position: absolute;width:600px;top: 70px;text-align: left;">Hope that the skill tree can grove a bit larger.. shouldent be that hard consider below</p>
+        <div class="mediumbox orangetext">
+            <h2>Grafisk Design</h2>
+            <br/>
+            <p>What´da fuck is design?</p>
+            <div class="smalbox">
+              <div class="smalbox2 orange"></div>
+              <div class="smalbox3">
+                20%
+              </div>
+
+            </div>
         </div>
 
-        <div class="ContentLeft">
+        <div class="mediumbox greentext">
+            <h2>HTML och CSS</h2>
+            <br/>
+            <p>What´da fuck is design?</p>
+            <div class="smalbox">
+              <div class="smalbox2 green"></div>
+              <div class="smalbox3">
+                30%
+              </div>
 
-          <div style="position: relative; top: -30px;">
-            <h3>Grafisk Design 0.1%</h3>
-
-          </div>
-          <p style="position: absolute;width:500px;top: 70px;text-align: left;">What´da fuck is design?</p>
+            </div>
         </div>
 
-        <div class="ContentMid">
-          <div style="position: relative; top:  -30px;">
-            <h3>Javascript 0.2%</h3>
-          </div>
-            <p style="position: absolute;width:500px;top: 70px;text-align: left;">4 weeks of digging in javascript. wiieee!!!</p>
+        <div class="mediumbox yellowtext">
+            <h2>Javascript</h2>
+            <br/>
+            <p>Sometimes i see dead javascript</p>
+            <div class="smalbox">
+              <div class="smalbox2 yellow"></div>
+              <div class="smalbox3">
+                50%
+              </div>
+
+            </div>
         </div>
 
-        <div class="ContentRight">
-          <div style="position: relative; top: -30px;">
-            <h3>HTML och CSS 0.1%</h3>
-          </div>
+        <div class="mediumbox whitetext">
+            <h2>Javascript</h2>
+            <br/>
+            <p>Sometimes i see dead javascript</p>
+            <div class="smalbox">
+              <div class="smalbox2 white"></div>
+              <div class="smalbox3">
+                10%
+              </div>
 
-          <p style="position: absolute;width:500px;top: 70px;text-align: left;">New to html and css.</p>
-
+            </div>
         </div>
 
-        <div class="Skill" style="top: 900px;">
-          <div style="position: relative; top: -30px;">
-            <h3>About</h3>
-          </div>
-          <p style="position: absolute;width:500px;top: 70px;text-align: left;">37 yeasr old living in Gothenburg in Eriksberg. Nothing more interest to say about this fellow</p>
+        <div class="border">
+          <ol>
+             <li><a href="exercises.html" target="_blank">P-Court</a></li>
+             <li><a href="https://www.linkedin.com/in/johan-augustsson-180b43138/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+             <li>kontakt</li>
+         </ol>
         </div>
 
 
-        <ol style="position: fixed; right: 20px ;bottom: 20px;">
-           <li><a href="exercises.html" target="_blank">Practice Court!</a></li>
-           <li><a href="https://www.linkedin.com/in/johan-augustsson-180b43138/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-       </ol>
       </div>
-
 
 
   </body>
