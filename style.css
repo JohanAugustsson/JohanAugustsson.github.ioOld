@@ -1,0 +1,126 @@
+  *{margin: 0 0; padding: 0 0;font-family: fantasy; font-weight: lighter;}
+
+  .MainPicture{
+    z-index: 40;
+    position: relative;
+    display: block;
+    height:100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/hemsida-1.appspot.com/o/me8.jpeg?alt=media&token=9ac80ab8-3ecb-4193-a59b-92056f4f9a98");}
+
+  #Content{
+    background-color: #09294f;
+    height:100vh;
+    width: 100%;
+    display: block;
+  }
+  .mediumbox{
+    box-sizing: border-box;
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    height: auto;
+    left: 10%;
+    top:  10%;
+
+
+    z-index: 60;
+    color:  #f7f3ef;
+    margin-right:20px;
+    margin-top: 50px;
+  }
+
+  .smalbox{
+    postion: relative;
+    display: inline-block;
+    width: 98%;
+    height: 25px;
+    z-index: 60;
+    margin-top: 20px;
+
+    background-color: rgba(250, 241, 241, 0.16);
+
+  }
+  .smalbox2{
+
+    position: relative;
+    display: inline-block;
+    width: 22%;
+    height: 100%;
+    background-color: rgb(200, 198, 197);
+    left:0;
+
+  }
+  .smalbox3{
+
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    right: 0;
+    top: -7px;
+    text-align: right;
+
+  }
+
+  .orange{
+    background-color: #D16E0D;
+    width: 20%;
+
+  }
+  .green{
+    background-color: #0FD49F;
+    width: 30%;
+  }
+  .yellow{
+    background-color: #C9D40F;
+    width: 50%;
+  }
+  .white{
+    background-color: #F6F6F4;
+    width: 10%;
+  }
+
+  .orangetext>h2{
+    color:#D16E0D;
+  }
+  .greentext>h2{
+    color: #0FD49F;
+  }
+  .yellowtext>h2{
+    color: #C9D40F;
+  }
+
+
+  .whitetext{
+    color:#F6F6F4;
+  }
+  .border{
+    top: 50vh;
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    z-index: 100;
+    right: 0;
+    width: 80%;
+    background-color: rgba(36, 65, 152, 0.5);
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    left:  10%;
+    radius: 10px;
+
+    margin:auto;
+
+  }
+  .border>ol>li{
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 30px;
+    margin-top: 5px;
+  }
+  a{color: white;}
