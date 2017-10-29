@@ -27,12 +27,19 @@
       button{
         width: 150px;
         height: 150px;
-        background-image: url("../img/construction.jpg");
-      }
-      img{
+
+        padding:0;
 
       }
-
+      button img{
+        padding: 0;
+        margin: 0;
+        height: 95%;
+        width: 95%;
+      }
+      button img:hover{
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -76,6 +83,6 @@
     <div>Denna är efter h1</div>
 
     <a href="#"><img src="../img/construction.jpg" alt=""></a>
-    <button type="button" name="button"></button>
+    <button type="button" name="button"><img src="../img/construction.jpg"></button>
   </body>
 </html>
