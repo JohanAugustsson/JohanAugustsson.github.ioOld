@@ -1,0 +1,12 @@
+ul{
+  display: inline-block;
+}
+ul li{
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  border:2px red solid;
+  float:left;
+  list-style-type: none;
+  background-color: lightblue;
+}

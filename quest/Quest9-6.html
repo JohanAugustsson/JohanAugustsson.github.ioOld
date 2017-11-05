@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Quest 9-6</title>
+  <style media="screen">
+    .container{
+      display: flex;
+    }
+    .container span{
+      background-color: grey;
+      color:white;
+      padding: 0px 10px;
+
+
+    }
+    .box{
+      flex:1;
+      height: 200px;
+      border: 2px red solid;
+    }
+
+    .boxbg{
+      background-color: white;
+    }
+
+    .bggreen, .bgred, .bgblue{
+      display: none;
+    }
+
+
+
+    @media screen and (min-width: 600px) and (max-width: 1050px){
+      .container{
+        flex-direction: column;
+        }
+    }
+
+    @media screen and (min-width: 601px){
+      .boxbg{
+        background-color: green;
+      }
+      .bgwhite{
+        display: none;
+      }
+      .bggreen{
+        display: block;
+      }
+    }
+    @media screen and (min-width: 751px){
+      .boxbg{
+        background-color: red;
+      }
+      .bggreen{
+        display: none;
+      }
+      .bgred{
+        display:block;
+      }
+    }
+    @media screen and (min-width: 901px){
+      .boxbg{
+        background-color: blue;
+      }
+      .bgred{
+        display: none;
+      }
+      .bgblue{
+        display:block;
+      }
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+  </div>
+  <div class="container">
+    <div class="box boxbg">
+      <span>box4, uppgift 9-8 skriv ut färg:</span>
+      <div class="bgwhite">
+        <span>white</span>
+      </div>
+      <div class="bggreen">
+        <span>green</span>
+      </div>
+      <div class="bgred">
+        <span>red</span>
+      </div>
+      <div class="bgblue">
+        <span>blue</span>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>

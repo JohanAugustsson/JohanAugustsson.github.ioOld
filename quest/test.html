@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+  </head>
+
+  <style media="screen">
+    div{
+      border: 1px solid lightgray;
+      padding: 1px;
+      margin: 20px 4px;
+    }
+
+    .container{
+      display: flex;
+    }
+    .container div:nth-child(2){
+      background-color: orange;
+      flex: 1 1 auto;
+    }
+    .container div:nth-child(1){
+      background-color: hotpink;
+      flex: 0 0 80px;
+    }
+    .container > div{
+      flex: 2 2 auto;
+    }
+
+  </style>
+  <body>
+
+    <div class="container">
+      <div>first</div>
+      <div>secound</div>
+      <div>third</div>
+
+
+    </div>
+
+
+  </body>
+</html>

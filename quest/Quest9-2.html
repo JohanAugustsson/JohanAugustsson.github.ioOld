@@ -1,67 +1,148 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Quest 9-2</title>
-    <style media="screen">
-      *{border: 2px red solid;}
-      @media screen and (max-width: 800px){
-        .container-inner{
-          flex-direction: column;
-        }
-        nav{
-          order: 2 ;
-        }
-        article{
-          order: 1 ;
-        }
-        aside{
-          order: 3 ;
-        }
-      }
-      .container-inner{
-        height: 800px;
-        display:flex;
-      }
-      header{
-        height: 150px;
-        background-color: #FFEDB9;
-      }
-      nav{
 
-        flex: 1;
-        background-color: #CBCCFF;
+<head>
+  <meta charset="utf-8">
+  <title>Quest 9-2</title>
+  <style>
+
+
+    body {
+      background-color: rgb(214, 214, 214);
+    }
+
+    .container {
+      display: flex;
+    }
+
+    header {
+      flex: 1;
+      background-color: #FFEDB9;
+      border-radius: 10px;
+      margin: 5px;
+      height: 10vh;
+    }
+
+    nav {
+      flex: 1;
+      background-color: #CBCCFF;
+      border-radius: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
+
+    }
+
+    article {
+      flex: 4;
+      background-color: #DEDD84;
+      border-radius: 5px;
+      height: 76vh;
+
+    }
+
+    aside {
+      flex: 1;
+      background-color: #CBCCFF;
+      border-radius: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
+
+    }
+
+    footer {
+      flex:1;
+      height: 150px;
+      background-color: #FFEDB9;
+      border-radius: 10px;
+      margin: 5px;
+      height: 10vh;
+    }
+
+    .bigg {
+      display: fixed;
+      height: 100px;
+    }
+
+    .smal {
+      display: fixed;
+      height: 100px;
+
+    }
+    @media screen and (max-width: 800px) {
+      .container {
+        flex-direction: column;
+
       }
+      .bigg {
+        display: block;
+      }
+
       article{
+        order: -1;
+        margin-left: 5px;
+        margin-righ: 5px;
+        height: 56vh;
+      }
+      nav,aside{
+        height: 10vh;
+        margin-top: 5px;
+      }
 
-        flex: 4;
-        background-color: #DEDD84;
-      }
-      aside{
+    }
 
-        flex: 1;
-        background-color: #CBCCFF;
+    @media screen and (max-width: 1900px) {
+      .bigg {
+        display: none;
       }
-      footer{
-        height:150px;
-        background-color: #FFEDB9;
+    }
+
+    @media print {
+      .bigg {
+        color: green;
       }
-    </style>
-  </head>
-  <body>
+    }
+
+    @media screen and (min-width: 500px) and (max-width: 800px) {
+      .smal {
+        font-weight: 900;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
 
   <div class="container">
-    <header>header</header>
-      <div class="container-inner">
-        <nav>nav</nav>
-        <article>article</article>
-        <aside>aside</aside>
+    <header>
+      header
+      <div class="bigg">
+        Övning 9.3: Screen size > 1900px :) <br> Övning 9.4: Denna class text är grön vid utskrift! :)
       </div>
-    <footer>footer</footer>
 
+    </header>
+  </div>
+
+  <div class="container">
+    <nav>nav</nav>
+    <article>article
+      <div class="smal">
+        Övning: 9.5 Denna text är fet vid 500 -800px :)
+      </div>
+    </article>
+    <aside>aside</aside>
+  </div>
+
+  <div class="container">
+    <footer>footer</footer>
   </div>
 
 
 
-  </body>
+
+
+
+
+</body>
+
 </html>
