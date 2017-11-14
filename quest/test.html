@@ -1,43 +1,90 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>test</title>
-  </head>
 
-  <style media="screen">
-    div{
-      border: 1px solid lightgray;
-      padding: 1px;
-      margin: 20px 4px;
-    }
+<head>
+  <meta charset="utf-8">
+  <title>test</title>
+</head>
 
-    .container{
-      display: flex;
-    }
-    .container div:nth-child(2){
-      background-color: orange;
-      flex: 1 1 auto;
-    }
-    .container div:nth-child(1){
-      background-color: hotpink;
-      flex: 0 0 80px;
-    }
-    .container > div{
-      flex: 2 2 auto;
-    }
+<style media="screen">
+  div {
+    border: 1px solid lightgray;
+    padding: 1px;
+    margin: 20px 4px;
+  }
 
-  </style>
-  <body>
+  .container1 {
+    display:  flex;
+  }
 
-    <div class="container">
-      <div>first</div>
-      <div>secound</div>
-      <div>third</div>
+  .container div:nth-child(2) {
+    background-color: orange;
+    flex: 1 0 auto;
+  }
+
+  .container div:nth-child(1) {
+    background-color: hotpink;
+    flex: 0 0 80px;
+  }
+
+  .container>div {
+    flex: 2 2 auto;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  header {
+    background-color: hotpink;
+    flex: 1 1 auto;
+    height: 100px;
+  }
+
+  aside {
+    background-color: green;
+    flex: 1 1 auto;
+  }
+
+  footer {
+    background-color: lightgrey;
+    flex: 3 1 400px;
+  }
+</style>
+
+<body>
+
+  <datalist id="mylist">
+      <option>panda</option>
+      <option>pannkaka</option>
+      <option>metron</option>
+    </datalist>
+
+  <input type="text" list="mylist">
+
+  <div class="container1">
+    <header>header</header>
+    <aside>asied</aside>
+    <footer>footer</footer>
+  </div>
+
+  <header>
+
+  </header>
 
 
-    </div>
+  <select>
+    <optgroup label="Bilar">
+    	<option>Volvo</option>
+    	<option>Saab</option>
+    </optgroup>
+    <optgroup label="Djur">
+     <option>Hund</option>
+  	 <option selected>Katt</option>
+    </optgroup>
+  </select>
 
 
-  </body>
+</body>
+
 </html>
