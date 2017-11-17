@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Quest 10.1 DOM</title>
+    <script type="text/javascript" src="Quest10-1.js"></script>
 
     <style media="screen">
       /**** Quest 10-4 ***/
@@ -17,6 +18,14 @@
          margin:10px;
          display: block;
       }
+
+      /**** Quest 10-8 *******/
+       #lists>ul{
+         width: 100px;
+         border: 2px red solid;
+         min-height: 100px;
+       }
+       /**** Quest 10-8 END **/
     </style>
 
   </head>
@@ -56,17 +65,31 @@
 
 
     <!-- Quest 10-6 -->
-    <button id="btn-write-div" type="button"> Click me to change the div</button>
+    <button id="btn-write-div" type="button">6: Click me to change the div</button>
     <div id="wrapper">
       <ol>
         <li>Shrek</li>
         <li>IT</li>
-      </ol> 
+      </ol>
     </div>
+    <!-- Quest 10-6 END -->
 
+    <!-- Quest 10-7 -->
+      <button id="btn-remove-tag">Click to erase</button>
+      <div id="hej">Detta ska bort</div>
+    <!-- Quest 10-8 -->
+      <button id="btn-change-list">Click me to change list!</button>
 
-    <script type="text/javascript" src="Quest10-1.js">
+      <div id="lists">
+        <ul>
+          <li>Dota</li>
+          <li>Dont Starve</li>
+        </ul>
+        <ul>
+        </ul>
+      </div>
 
-    </script>
+      <!-- Quest 10-8 END -->
+
   </body>
 </html>

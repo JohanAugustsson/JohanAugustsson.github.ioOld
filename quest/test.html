@@ -1,90 +1,48 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <title>test</title>
+    <meta charset="utf-8">
+    <title>Jonathan Johansson</title>
+
+   <style>
+
+#hej{
+  position: relative;
+  text-align: center;
+  font-size: 2em;
+  background: red;
+  height:600px;
+  width: 100px;
+}
+
+       </style>
+
 </head>
-
-<style media="screen">
-  div {
-    border: 1px solid lightgray;
-    padding: 1px;
-    margin: 20px 4px;
-  }
-
-  .container1 {
-    display:  flex;
-  }
-
-  .container div:nth-child(2) {
-    background-color: orange;
-    flex: 1 0 auto;
-  }
-
-  .container div:nth-child(1) {
-    background-color: hotpink;
-    flex: 0 0 80px;
-  }
-
-  .container>div {
-    flex: 2 2 auto;
-  }
-
-  .container {
-    display: flex;
-  }
-
-  header {
-    background-color: hotpink;
-    flex: 1 1 auto;
-    height: 100px;
-  }
-
-  aside {
-    background-color: green;
-    flex: 1 1 auto;
-  }
-
-  footer {
-    background-color: lightgrey;
-    flex: 3 1 400px;
-  }
-</style>
-
 <body>
 
-  <datalist id="mylist">
-      <option>panda</option>
-      <option>pannkaka</option>
-      <option>metron</option>
-    </datalist>
 
-  <input type="text" list="mylist">
-
-  <div class="container1">
-    <header>header</header>
-    <aside>asied</aside>
-    <footer>footer</footer>
-  </div>
-
-  <header>
-
-  </header>
+   <div id="hej"></div>
 
 
-  <select>
-    <optgroup label="Bilar">
-    	<option>Volvo</option>
-    	<option>Saab</option>
-    </optgroup>
-    <optgroup label="Djur">
-     <option>Hund</option>
-  	 <option selected>Katt</option>
-    </optgroup>
-  </select>
 
+   <script>
+
+
+       let hej = document.getElementById('hej');
+
+
+       hej.addEventListener("click",function(e){
+
+         let pos = 0;
+          let sek =600
+          setInterval(function(){
+            console.log(sek++)
+            hej.style.height = pos + "px"
+            pos=1
+          },100)
+
+       })
+    </script>
 
 </body>
-
 </html>

@@ -1,7 +1,13 @@
+window.addEventListener("load",()=>{
+
+
+
+
 /******** QUEST 10-1 ************************************/
 let container = document.getElementById("container");
 
-container.innerHTML="Quest 10-1: Text har bytts :P"
+container.innerHTML="<p>Quest 10-1: Text har bytts :P</p>";
+container.innerText+="<p>Quest 10-1: Text har bytts :P</p>";
 /****** QUEST 10-1 END ********************************/
 
 /******** QUEST 10-2 ************************************/
@@ -74,22 +80,72 @@ btnChangeSection.addEventListener("click",()=>{
 
 let btnWriteToDiv = document.getElementById("btn-write-div");
 let wrapper = document.getElementById("wrapper");
-/*console.log(wrapper.childNodes);*/
+console.log(wrapper.childNodes);
 
 btnWriteToDiv.addEventListener("click",()=>{
+  let sum ="";
+  function doShit(current, depth) {
+    let children = current.childNodes;
 
-  let doShit=(wrapper,x)=>{
+    for (var i = 0, len = children.length; i < len; i++) {
+        if (children[i].nodeName!="#text"){
+          sum+=(children[i].nodeName)+"<br>";
 
+        }
 
-      var child = wrapper.childNodes;
-      for(var i = 0, len = child.length; i<len; i++){
-        console.log(child);
-        doShit(child[i], x+1);
+        doShit(children[i], depth + 1);
+    }
+  }
+  doShit(wrapper, 0);
+  wrapper.innerHTML+= wrapper.childNodes.length+"st childs (#text removed)<br>"+(sum);
+});
 
-      }
+/*************** QUEST 10-6 END **************************************/
+
+/*************** QUEST 10-7  **************************************/
+let btnErase = document.getElementById("btn-remove-tag");
+let body = document.getElementsByTagName('body')[0];
+let erase = document.getElementById('hej');
+
+let remove ="";
+
+let clicked2 =false;
+
+btnErase.addEventListener("click",function(){
+  if(clicked2){
+      body.appendChild(remove);
+      clicked2=false;
+  }else{
+    remove= body.removeChild(erase);
+      clicked2=true;
   }
 
 
-  doShit(wrapper,0);
 
 });
+
+/*************** QUEST 10-8  **************************************/
+  let btnMoveLi = document.getElementById("btn-change-list");
+  let parentList = document.getElementById("lists");
+  let firstList = parentList.getElementsByTagName("ul")[0];
+  let secondList = parentList.getElementsByTagName("ul")[1];
+  let removedFromList = "";
+
+  btnMoveLi.addEventListener("click",()=>{
+    let move = firstList.getElementsByTagName("li")[0];
+
+    if (move!==undefined){
+      removedFromList = firstList.removeChild(move);
+      secondList.appendChild(removedFromList);
+    }else{
+      console.log("no more in the list to move");
+    };
+
+
+  });
+
+
+
+/*************** QUEST 10-8 END  **************************************/
+
+}); /***** ENd For load ***/
