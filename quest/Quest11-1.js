@@ -110,6 +110,7 @@ window.addEventListener("load",()=>{
  window.addEventListener("keypress",function(e){
    footer.innerHTML=e.key;
  });
+
  window.addEventListener("keyup",function(e){
    footer.innerHTML=footerText;
  });
