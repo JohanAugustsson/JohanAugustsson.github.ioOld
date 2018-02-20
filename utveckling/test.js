@@ -8,8 +8,7 @@ let myTimer=()=>{
   console.log(i);
   snd.volume= 0.2;
   snd.play();
-  //navigator.geolocation.getCurrentPosition(showPosition);
-  navigator.geolocation.watchPosition(showPosition);
+  navigator.geolocation.getCurrentPosition(showPosition);
 }
 
 
@@ -28,6 +27,7 @@ let snd = new Audio("../Audio/button-1.wav");
 window.addEventListener("load",function(event){
 
   let btnPlaySound = document.getElementById('btn-playSound');
+  navigator.geolocation.watchPosition(showPosition);
   btnPlaySound.addEventListener('click',function(event){
 
     let myWatch= setInterval(myTimer,1000);
