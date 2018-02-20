@@ -11,14 +11,21 @@ let myTimer=()=>{
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
+let snapTime = "";
 
 let showPosition =(position)=>{
+  if(snapTime==position.timestamp){
+
+  }else{
+    snapTime=position.timestamp;
 
   console.log(position);
+
 
   let positionContainer = document.getElementsByClassName('position')[0];
   //positionContainer.innerHTML += "<p>"+ now +"<br/>"+position.coords.latitude +"<br/>"+ position.coords.longitude+"</p>"
   positionContainer.innerHTML += "<p>"+"time: "+position.timestamp+ "<br/>"+"latitude: "+position.coords.latitude +"<br/>"+"longitude: "+ position.coords.longitude+"</p>"
+  }
 }
 
 
