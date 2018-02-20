@@ -13,14 +13,23 @@ let myTimer=()=>{
 }
 
 
+let showPosition =(position)=>{
 
-let snd = new Audio("../Audio/button-1.wav"); // buffers automatically when created
+  console.log(position);
+
+  let positionContainer = document.getElementsByClassName('position')[0];
+  //positionContainer.innerHTML += "<p>"+ now +"<br/>"+position.coords.latitude +"<br/>"+ position.coords.longitude+"</p>"
+  positionContainer.innerHTML += "<p>"+"time: "+position.timestamp+ "<br/>"+"latitude: "+position.coords.latitude +"<br/>"+"longitude: "+ position.coords.longitude+"</p>"
+}
+
+
+let snd = new Audio("../Audio/button-1.wav");
 
 window.addEventListener("load",function(event){
 
   let btnPlaySound = document.getElementById('btn-playSound');
   btnPlaySound.addEventListener('click',function(event){
-    console.log("test");
+
     let myWatch= setInterval(myTimer,1000);
   })
 
@@ -29,9 +38,7 @@ window.addEventListener("load",function(event){
 })
 
 
-let showPosition =(position)=>{
-  let a = position
-  let positionContainer = document.getElementsByClassName('position')[0];
-  positionContainer.innerHTML += "<p>"+a.coords.latitude +"<br/>"+ a.coords.longitude+"</p>"
-  console.log(position);
-}
+navigator.permissions.query({name:'geolocation'}).then(function(result) {
+  console.log(result);
+
+});
