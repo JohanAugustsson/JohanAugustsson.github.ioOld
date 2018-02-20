@@ -18,8 +18,10 @@ let startTime = 0;
 let showPosition =(position)=>{
   //if(snapTime==position.timestamp){
   //}else{
-    snapTime=position.timestamp;
-    let time = (position.timestamp - startTime)/1000
+    //snapTime=position.timestamp;
+    //let time = (position.timestamp - startTime)/1000
+    snapTime= Date.now();
+    time = (snapTime-startTime)/1000;
     let positionContainer = document.getElementsByClassName('position')[0];
     positionContainer.innerHTML += "<p>"+"time: "+ time + "<br/>"+"latitude: "+position.coords.latitude +"<br/>"+"longitude: "+ position.coords.longitude+"</p>"
   //}
