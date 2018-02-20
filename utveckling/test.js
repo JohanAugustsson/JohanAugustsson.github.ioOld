@@ -9,7 +9,7 @@ let myTimer=()=>{
   snd.volume= 0.2;
   snd.play();
   //navigator.geolocation.getCurrentPosition(showPosition);
-
+  navigator.geolocation.watchPosition(showPosition);
 }
 
 
@@ -24,7 +24,7 @@ window.addEventListener("load",function(event){
     let myWatch= setInterval(myTimer,1000);
   })
 
-  navigator.geolocation.watchPosition(showPosition);
+
 
 })
 
