@@ -7,7 +7,7 @@ let i = 0;
 let myTimer=()=>{
   i++
   console.log(i);
-  snd.volume= 0.2;
+  snd.volume= 0.5;
   snd.play();
   navigator.geolocation.getCurrentPosition(showPosition);
 }
@@ -38,7 +38,9 @@ window.addEventListener("load",function(event){
   })
 })
 
+/*
 
 navigator.permissions.query({name:'geolocation'}).then(function(result) {
   console.log(result);
 });
+*/
