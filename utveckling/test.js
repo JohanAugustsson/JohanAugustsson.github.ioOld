@@ -30,8 +30,11 @@ window.addEventListener("load",function(event){
   let btnPlaySound = document.getElementById('btn-playSound');
   //navigator.geolocation.watchPosition(showPosition);
   btnPlaySound.addEventListener('click',function(event){
+    snd.play();
+    snd.pause();
+
     startTime = Date.now();
-    let myWatch= setInterval(myTimer,2000);
+    let myWatch= setInterval(myTimer,1000);
   })
 })
 
