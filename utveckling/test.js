@@ -15,6 +15,7 @@ let myTimer=()=>{
 
 let snapTime = "";
 let startTime = 0;
+let myWatch ="";
 let showPosition =(position)=>{
   //if(snapTime==position.timestamp){
   //}else{
@@ -32,13 +33,17 @@ let showPosition =(position)=>{
 window.addEventListener("load",function(event){
 
   let btnPlaySound = document.getElementById('btn-playSound');
+  let btnStopSound = document.getElementById('btn-stopSound');
   //navigator.geolocation.watchPosition(showPosition);
   btnPlaySound.addEventListener('click',function(event){
     snd.play();
-
-
     startTime = Date.now();
-    let myWatch= setInterval(myTimer,1000);
+    myWatch= setInterval(myTimer,1000);
+  })
+
+  btnStopSound.addEventListener('click',function(event){
+    clearInterval(myWatch)
+
   })
 })
 
