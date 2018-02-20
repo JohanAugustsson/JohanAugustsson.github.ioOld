@@ -34,8 +34,8 @@ window.addEventListener("load",function(event){
     snd.play();
 
 
-    //startTime = Date.now();
-    //let myWatch= setInterval(myTimer,1000);
+    startTime = Date.now();
+    let myWatch= setInterval(myTimer,1000);
   })
 })
 
