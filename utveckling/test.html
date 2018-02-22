@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <script src="test.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
   <style media="screen">
     *{color: red;}
+    #map{
+      width: 80%;
+      height: 50vh;
+    }
   </style>
   <body>
     <button id="btn-playSound">Play ME</button>
     <button id="btn-stopSound">Stop play</button>
     <div class="position"></div>
+    <div id="map"></div>
   </body>
 </html>

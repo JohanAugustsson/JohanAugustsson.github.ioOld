@@ -45,6 +45,7 @@ window.addEventListener("load",function(event){
     clearInterval(myWatch)
 
   })
+  mapInit();
 })
 
 /*
@@ -53,3 +54,28 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
   console.log(result);
 });
 */
+
+let mapInit = ()=>{
+  let mapDiv = document.getElementById('map');
+
+  let centerPos = new google.maps.LatLng(57.668799, 12.292314);
+  let mapOptions = {
+    center: centerPos,
+    zoom: 14,
+    mapType: "terrain"
+  }
+  let map = new google.maps.Map(mapDiv,mapOptions);
+
+  let desinations = new google.maps.MVCArray();
+  desinations.push( new google.maps.LatLng(57.668000, 12.290000));
+  desinations.push( new google.maps.LatLng(57.668000, 12.295000));
+  desinations.push( new google.maps.LatLng(57.668000, 12.298000));
+  desinations.push( new google.maps.LatLng(57.669000, 12.300000));
+  desinations.push( new google.maps.LatLng(57.670000, 12.290000));
+
+  let polygonOptions = {path: desinations, strokeColor:"#ff0000", fillColor: "#00ff00"};
+  let polygon = new google.maps.Polygon(polygonOptions);
+
+  polygon.setMap(map);
+
+}
