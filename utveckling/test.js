@@ -30,7 +30,7 @@ let showPosition =(position)=>{
     snapTime= Date.now();
     time = (snapTime-startTime)/1000;
     let positionContainer = document.getElementsByClassName('position')[0];
-    positionContainer.innerHTML += "<p>"+"time: "+ time + "<br/>"+"latitude: "+position.coords.latitude +"<br/>"+"longitude: "+ position.coords.longitude+"</p>"
+    positionContainer.innerHTML = "<p>"+"time: "+ time + "<br/>"+"latitude: "+position.coords.latitude +"<br/>"+"longitude: "+ position.coords.longitude+"</p>"
 
 
     desinations.push(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
