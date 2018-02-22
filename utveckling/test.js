@@ -18,7 +18,29 @@ window.addEventListener("load",function(event){
   })
 
   mapInit();
+
+
+  function printStatus() {
+    document.getElementById("status").innerHTML = screen.keepAwake
+      ? "enabled"
+      : "disabled";
+  }
+
+
+
+
 })
+
+function toggle() {
+  if ("keepAwake" in screen) {
+    screen.keepAwake = !screen.keepAwake;
+    printStatus();
+  }
+}
+
+if ("keepAwake" in screen) {
+  printStatus();
+}
 
 
 let errorCallback =function(){
