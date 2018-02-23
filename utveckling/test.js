@@ -25,10 +25,27 @@ let myTimer=()=>{
   navigator.geolocation.getCurrentPosition(showPosition,errorCallback,{frequency:1, maximumAge: 5, timeout: 4000, enableHighAccuracy:true});
 
 }
-let errorCallback =function(response){
+let errorCallback =function(error){
+  let str = "";
+  switch(error.code) {
+        case error.PERMISSION_DENIED:
+            str = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            str = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            str = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            str = "An unknown error occurred."
+            break;
+  }
+
+
   let millis = Date.now() - start;
   let secounds = Math.floor(millis/1000)
-  document.getElementsByClassName('position')[0].innerHTML+=`<br/>${secounds}<br/>error.. could not read geo`
+  document.getElementsByClassName('position')[0].innerHTML+=`<br/>${secounds}<br/>error.. ${str}`
   console.log("error");
 }
 
