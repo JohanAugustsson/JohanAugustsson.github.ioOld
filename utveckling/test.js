@@ -22,7 +22,7 @@ window.addEventListener("load",function(event){
 
 
 let myTimer=()=>{
-  navigator.geolocation.getCurrentPosition(showPosition,errorCallback,{frequency:5000, maximumAge: 0, timeout: 1000, enableHighAccuracy:true});
+  navigator.geolocation.getCurrentPosition(showPosition,errorCallback,{frequency:1, maximumAge: 5, timeout: 4000, enableHighAccuracy:true});
 
 }
 let errorCallback =function(response){
