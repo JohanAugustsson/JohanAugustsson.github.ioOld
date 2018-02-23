@@ -1,15 +1,17 @@
 let snd = new Audio("../Audio/button-1.wav");
+let start = "";
 
 window.addEventListener("load",function(event){
   let btnPlaySound = document.getElementById('btn-playSound');
   let btnStopSound = document.getElementById('btn-stopSound');
   btnPlaySound.addEventListener('click',function(event){
-    document.getElementsByClassName('position')[0].innerHTML="Körs.."
+    start = Date.now();
+    document.getElementsByClassName('position')[0].innerHTML+="Körs.."
     myWatch= setInterval(myTimer,5000);
   })
 
   btnStopSound.addEventListener('click',function(event){
-    document.getElementsByClassName('position')[0].innerHTML="Stoppad"
+    document.getElementsByClassName('position')[0].innerHTML+="<br/> Stoppad"
     clearInterval(myWatch)
   })
 
@@ -20,9 +22,13 @@ window.addEventListener("load",function(event){
 
 
 let myTimer=()=>{
-  navigator.geolocation.getCurrentPosition(showPosition,errorCallback,{frequency:5000, maximumAge: 0, timeout: 300, enableHighAccuracy:false});
+  navigator.geolocation.getCurrentPosition(showPosition,errorCallback,{frequency:5000, maximumAge: 0, timeout: 1000, enableHighAccuracy:true});
+
 }
-let errorCallback =function(){
+let errorCallback =function(response){
+  let millis = Date.now() - start;
+  let secounds = Math.floor(millis/1000)
+  document.getElementsByClassName('position')[0].innerHTML+=`<br/>${secounds}<br/>error.. could not read geo`
   console.log("error");
 }
 
@@ -31,8 +37,10 @@ let errorCallback =function(){
 
 let desinations=[];
 let showPosition =(position)=>{
+  let millis = Date.now() - start;
+  let secounds = Math.floor(millis/1000)
   let positionContainer = document.getElementsByClassName('position')[0];
-  positionContainer.innerHTML = "<p> latitude: "+position.coords.latitude +"<br/>"+"longitude: "+ position.coords.longitude+"</p>"
+  positionContainer.innerHTML += `<br/>${secounds}<p> latitude: ${position.coords.latitude} <br/> longitude: ${position.coords.longitude}</p>`
   desinations.push(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
 
 }
