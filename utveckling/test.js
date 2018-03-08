@@ -16,6 +16,7 @@ window.addEventListener("load",function(event){
   })
 
   mapInit();
+  initMap(); //version 2
 
 })
 
@@ -62,6 +63,7 @@ let showPosition =(position)=>{
 
 }
 
+
 let mapInit = ()=>{
   let mapDiv = document.getElementById('map');
   desinations = new google.maps.MVCArray();
@@ -72,7 +74,7 @@ let mapInit = ()=>{
     zoom: 14,
     mapType: "terrain"
   }
-  let map = new google.maps.Map(mapDiv,mapOptions);
+  map = new google.maps.Map(mapDiv,mapOptions);
 
 
   //desinations.push( new google.maps.LatLng(57.668000, 12.290000));
@@ -86,4 +88,83 @@ let mapInit = ()=>{
 
   Polyline.setMap(map);
 
+}
+
+
+
+var poly;
+var map2;
+
+function initMap() {
+  map2 = new google.maps.Map(document.getElementById('map2'), {
+    zoom: 14,
+    center: {lat: 57.7038242, lng: 11.9060927}  // Center the map on Chicago, USA.
+  });
+
+  poly = new google.maps.Polyline({
+    strokeColor: '#000000',
+    strokeOpacity: 1.0,
+    strokeWeight: 3,
+    editable: true
+  });
+  poly.setMap(map2);
+
+  // Add a listener for the click event
+  map2.addListener('click', addLatLng);
+
+}
+
+// Handles click events on a map, and adds a new point to the Polyline.
+function addLatLng(event) {
+
+  var path = poly.getPath();
+
+  // Because path is an MVCArray, we can simply append a new coordinate
+  // and it will automatically appear.
+  path.push(event.latLng);
+  let lastNb = path.b.length-1;
+  console.log(lastNb);
+  console.log(path);
+  if (lastNb>2){
+    distance = google.maps.geometry.spherical.computeDistanceBetween(path.b[0], path.b[lastNb])
+    distance = Math.floor(distance);
+    console.log(distance);
+
+  }
+  // Add a new marker at the new plotted point on the polyline.
+  /*
+  var marker = new google.maps.Marker({
+    position: event.latLng,
+    title: '#' + path.getLength(),
+    map: map2,
+    draggable: true,
+    number : path.getLength()
+  });
+  console.log(marker.title);
+
+  marker.addListener('dragend', function (event) {
+    console.log(this.number);
+    console.log(this.getPosition().lat());
+    console.log(this.getPosition().lng());
+    let latitude = this.getPosition().lat();
+    let longitude = this.getPosition().lng();
+    let number = this.number -1
+    let a = new google.maps.LatLng(latitude,longitude)
+    console.log(a);
+    console.log(path.b[number] = a);
+    poly.setPath(path);
+
+    let distance = 0;
+    if(number==0){
+      console.log("nu är den 0");
+    }else{
+      distance = google.maps.geometry.spherical.computeDistanceBetween(path.b[number], path.b[number-1])
+      distance = Math.floor(distance);
+    }
+
+    console.log(distance);
+    this.title = distance;
+
+  });
+  */
 }

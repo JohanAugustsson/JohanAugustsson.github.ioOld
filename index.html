@@ -115,7 +115,8 @@
 
     }
 
-    .questBox {
+    .questBox,
+    .projectBox{
 
       margin-top: 30px;
       background-color: rgba(129, 129, 129, 0.3);
@@ -125,7 +126,7 @@
       padding-bottom: 5px;
     }
 
-    .questHeader {
+    .questHeader, .projectBox {
       background-color: rgba(46, 79, 221, 0.31);
       width: 100%;
       height: 30px;
@@ -134,7 +135,8 @@
       border-top-left-radius: 10px;
 
     }
-    .questBox a{
+    .questBox a,
+    .projectBox a{
       color:white;
     }
     .card{
@@ -224,6 +226,7 @@
 
   <!-- ABOUT -->
   <div class="container-fluid col-lg-12">
+    <h3>Sidan är under utveckling!! Alla projekt hittar ni längst ner!</h3>
     <div class="row row-m-top">
       <div class="aboutBox"></div>
     </div>
@@ -407,9 +410,9 @@
         <div class="media">
           <img src="img/javascript.png" alt="" class="align-self-top mr-3" style="height:64px;">
           <div class="media-body">
-            <h3 class="mt-0">JAVASCRIPT 2%</h3>
-            <p>Javascript är något vi kommer att lära oss.</p>
-            <p>Efter fulländad utbildning förväntas man vara king på javasript.</p>
+            <h3 class="mt-0">JAVASCRIPT 60%</h3>
+            <p>Utbildning består väldigt mycket av javascript där den är uppdelad i 3st större delare. <br/>Totalt ger det 125Yh där 5Yh motsvarar 1vecka.</p>
+
           </div>
         </div>
       </div>
@@ -418,8 +421,8 @@
         <div class="media">
           <img src="img/html5.jpeg" alt="" class="align-self-top mr-3" style="height:64px;">
           <div class="media-body">
-            <h3 class="mt-0">HTML5 CSS 2%</h3>
-            <p>HTML5 och CSS är något vi kommer att lära oss.</p>
+            <h3 class="mt-0">HTML5 CSS 60%</h3>
+            <p>En ren kurs som varade i 1mån.</p>
           </div>
         </div>
       </div>
@@ -427,8 +430,8 @@
         <div class="media">
           <img src="img/Graphic Design.jpeg" alt="" class="align-self-top mr-3" style="height:64px;">
           <div class="media-body">
-            <h3 class="mt-0">Grafisk Design 2%</h3>
-            <p>Design är något vi kommer att lära oss.</p>
+            <h3 class="mt-0">Grafisk Design samt Grafikprogram 30%</h3>
+            <p>Här lärde vi oss vikten av att använda rätt färger, former och "design-patterns" för att göra webbsidor. <br/>Mjukvara: Photoshop,Gimp,illustrator,incscape och indesign. Metoder: Moqups och Wireframes.</p>
           </div>
         </div>
       </div>
@@ -450,7 +453,7 @@
           <img class="card-img-top" src="img/stopwatch.jpg" alt="">
           <div class="card-body">
             <h3 class="card-title" style="color:black;">Exercis Frontend</h3>
-            <p class="card-text" style="color:black;">Här finner du alla övningar som vi gjort i vår Frontendutbildning.</p>
+            <p class="card-text" style="color:black;">Här finner du basic övningar som vi gjort i vår Frontendutbildning.<br/>Utfördes under hösten 2017</p>
             <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#quest">Exercis</a>
           </div>
         </div>
@@ -460,9 +463,9 @@
         <div class="card" style="width:20rem;">
           <img class="card-img-top" src="img/construction.jpg" alt="">
           <div class="card-body">
-            <h3 class="card-title" style="color:black;">Projects</h3>
-            <p class="card-text" style="color:black;">Under konstruktion!!</p>
-            <a href="#" class="btn btn-primary">Projects</a>
+            <h3 class="card-title" style="color:black;">Projekt</h3>
+            <p class="card-text" style="color:black;">Under utbildningens gång har vi fått arbeta med ett flertal project. Här ges exempel på några av dem.</p>
+            <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#project">Projekt</a>
           </div>
 
         </div>
@@ -491,7 +494,6 @@
         <li><a href="./quest/Quest7-13.html" target="_blank">Quest 7-13</a></li>
         <li><a href="./quest/Quest7-14.html" target="_blank">Quest 7-14</a></li>
         <li><a href="./quest/Quest7-15.html" target="_blank">Quest 7-15</a></li>
-
         <li><a href="./quest/Quest7-17.html" target="_blank">Quest 7-17</a></li>
         <li><a href="./quest/Quest7-18.html" target="_blank">Quest 7-18</a></li>
         <li><a href="./quest/Quest7-19.html" target="_blank">Quest 7-19 Video och ljud</a></li>
@@ -512,6 +514,33 @@
 
   </div>
 
+  <div class="container-fluid col-lg-10 collapse" id="project">
+    <div class="questBox">
+      <div class="questHeader">
+        <h5> Projekt </h5>
+      </div>
+      <ul>
+        <li><a href="https://jackpotdante.github.io/Runaway-App/" target="_blank">Runaway: En mobil-app för löpning (under konstruktion)</a>
+          <p>Uppdrag: Använda allt vi hittils lärt oss tillsammans med Scrum.<br/>
+          Team: Johan, Anna, Oskar och Christopher</p>
+        </li>
+        <li><a href="https://johanaugustsson.github.io/Labb3/" target="_blank">Webbplats för filmer</a>
+          <p>Uppdrag: Filmsida där det skall vara möljigt att söka/addera/rediga och filtrera filmer som ligger sparade i firebase. <br/>
+          Team: Johan Augustsson</p>
+        </li>
+        <li><a href=" https://johanaugustsson.github.io/whatChat/" target="_blank">WhatChat är en webbplats för chatt</a>
+          <p>Uppdrag: En chatt där användare skall kunna skicka meddelande,gilla,ogilla och logga in. Vi användes oss även här av firebase.<br/>
+          Team: Johan Augustsson, Andreas Holmstedt</p>
+        </li>
+        <li><a href="https://johanaugustsson.github.io/Project-Header/" target="_blank">Produktsida för spel</a>
+          <p>Uppdrag: Utfördes i början av utbildningen där det endast var tillåtet att använda html5 och css för att styla webbsida.<br/>
+          Team: Johan Augustsson, Sabrina Palm och Erik Johansson</p>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
 
 
 
@@ -523,7 +552,7 @@
       <a href="https://www.linkedin.com/in/johan-augustsson-180b43138/" target="-_blank"><i class="fa fa-linkedin-square fa-4x col-lg-6" aria-hidden="true"></i></i></a>
 
       <a href="#"><i class="fa fa-envelope-square fa-4x col-lg-8" aria-hidden="true"></i></a>
-      <a href="#"><i class="fa fa-github fa-4x col-lg-6" aria-hidden="true"></i></a>
+      <a href="https://github.com/JohanAugustsson"><i class="fa fa-github fa-4x col-lg-6" aria-hidden="true"></i></a>
 
     </div>
   </div>
